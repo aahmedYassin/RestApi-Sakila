@@ -1,7 +1,7 @@
 
 
 # Project Title
-SOAP Sakila Database Web Service
+REST Sakila Database Web Service
 
 ### Description
 - This API allow  to access and retrieve data from many categories such as actor,film and others
