@@ -1,0 +1,129 @@
+package gov.iti.jets.servcies.impls;
+
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
+import gov.iti.jets.Exceptions.*;
+import gov.iti.jets.repositories.impls.ActorRepoImpl;
+import gov.iti.jets.servcies.interfaces.ActorServices;
+import gov.iti.jets.model.dtos.*;
+import gov.iti.jets.model.entities.*;
+import gov.iti.jets.utils.mappers.*;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DELETE;
+import jakarta.ws.rs.FormParam;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.HEAD;
+import jakarta.ws.rs.MatrixParam;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.GenericEntity;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+
+@Path("actor")
+public class ActorServicesImpl {
+
+    @GET
+    @Path("getActor/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getActorById(@PathParam("id") int id) throws InvalidDataException {
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+
+        if (actorRepoImpl.getActorById(id) == null) {
+
+            throw new InvalidDataException(" actor id not exist");
+        }
+
+        return Response.ok().entity(ActorMapper.INSTANCE.toDto(actorRepoImpl.getActorById(id))).build();
+
+    }
+
+    @GET
+    @Path("getAllActors")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllActors() {
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+        ArrayList<Actor> allActors = actorRepoImpl.getAllActors();
+        ArrayList<ActorDto> allActorsDto = new ArrayList<>();
+        for (int i = 0; i < allActors.size(); i++) {
+
+            allActorsDto.add(ActorMapper.INSTANCE.toDto(allActors.get(i)));
+        }
+
+        return Response.ok().entity(allActorsDto).build();
+
+    }
+
+    @GET
+    @Path("getActorByName/{name}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getActorByFirstName(@PathParam("name") String name) throws InvalidDataException {
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+        if (actorRepoImpl.getActorByFirstName(name) == null) {
+
+            throw new InvalidDataException(" first name not exist");
+        }
+
+        return Response.ok().entity(ActorMapper.INSTANCE.toDto(actorRepoImpl.getActorByFirstName(name))).build();
+
+    }
+
+    @POST
+    @Path("createActor")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createActor(ActorDto actorDto) {
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+        actorDto.setLastUpdate(new Timestamp(System.currentTimeMillis()));
+        actorRepoImpl.createActor(ActorMapper.INSTANCE.toEntity(actorDto));
+        return Response.ok().entity(actorDto).build();
+
+    }
+ 
+    @GET
+    @Path("updateActor")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ActorDto updateActorById(@QueryParam("id") int id,@QueryParam("firstName") String firstName) throws InvalidDataException {
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+        if (actorRepoImpl.updateActorById(id, firstName) == null) {
+
+            throw new InvalidDataException(" actor id not exist");
+        }
+        return ActorMapper.INSTANCE.toDto(actorRepoImpl.updateActorById(id, firstName));
+
+    }
+
+    @DELETE
+    @Path("deleteActor/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public int deleteActorById(@PathParam("id") int id) throws InvalidDataException {
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+
+        return actorRepoImpl.deleteActorById(id);
+
+    }
+
+    @GET
+    @Path("getActorFilms/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getActorFilmsById(@PathParam("id") int id) throws InvalidDataException {
+
+        ActorRepoImpl actorRepoImpl = new ActorRepoImpl();
+        if (actorRepoImpl.getActorFilmsById(id) == null) {
+
+            throw new InvalidDataException(" actor id not exist");
+        }
+        ArrayList<Film> film = actorRepoImpl.getActorFilmsById(id);
+        ArrayList<FilmDto> filmDto = new ArrayList<>();
+        for (int i = 0; i < film.size(); i++) {
+            filmDto.add(FilmMapper.INSTANCE.toDto(film.get(i)));
+        }
+
+        return Response.ok().entity(filmDto).build();
+
+    }
+
+}
