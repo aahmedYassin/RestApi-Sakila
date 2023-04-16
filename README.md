@@ -5,9 +5,10 @@ REST Sakila Database Web Service
 
 ### Description
 - This API allow  to access and retrieve data from many categories such as actor,film and others
-it build recently using Soap
+it build recently using Rest
 
 ### Documentation 
+- https://documenter.getpostman.com/view/14564420/2s93XyU3Dy
 
 
 # Database
