@@ -26,7 +26,7 @@ import java.util.Set;
 public class Category  implements java.io.Serializable {
 
 
-     private Byte categoryId;
+     private short categoryId;
      private String name;
      private Timestamp lastUpdate;
      private Set<FilmCategory> filmCategories = new HashSet<FilmCategory>(0);
@@ -49,11 +49,11 @@ public class Category  implements java.io.Serializable {
 
     
     @Column(name="category_id", unique=true, nullable=false)
-    public Byte getCategoryId() {
+    public short getCategoryId() {
         return this.categoryId;
     }
     
-    public void setCategoryId(Byte categoryId) {
+    public void setCategoryId(short categoryId) {
         this.categoryId = categoryId;
     }
 

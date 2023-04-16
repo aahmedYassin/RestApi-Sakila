@@ -1,9 +1,8 @@
 package gov.iti.jets.model.dtos;
 
-import jakarta.ws.rs.core.Link;
-import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import gov.iti.jets.model.entities.Address;
+import gov.iti.jets.model.entities.Store;
 import java.sql.Timestamp;
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,12 +16,14 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class ActorDto {
-    
-    private Short actorId;
+public class StaffDto {
+    private short staffId;
+    private AddressDto address;
     private String firstName;
     private String lastName;
+    private String email;
+    private boolean active;
+    private String username;
+    private String password;
     private Timestamp lastUpdate;
-    @XmlJavaTypeAdapter(Link.JaxbAdapter.class)  // HATEOAS
-    private List<Link> links;
 }

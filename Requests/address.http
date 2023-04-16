@@ -1,0 +1,16 @@
+
+GET http://localhost:9091/RestSakilaApplication/webapi/address/getAddressById/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/address/getAddressByPostalCode/35200 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+
+GET http://localhost:9091/RestSakilaApplication/webapi/address/getAddressByDistrict/QLD HTTP/1.1
+Content-Type: application/json
+Accept: application/json

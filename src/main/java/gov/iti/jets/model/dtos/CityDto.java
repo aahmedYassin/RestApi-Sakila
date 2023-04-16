@@ -1,5 +1,6 @@
 package gov.iti.jets.model.dtos;
 
+import gov.iti.jets.model.entities.Country;
 import java.sql.Timestamp;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import java.util.*;
 
 @Data
 @Getter
@@ -15,9 +15,9 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CategoryDto {
+public class CityDto {
 
-  private Short categoryId;
-  private String name;
-  private Timestamp lastUpdate;
+    private Short cityId;
+    private String city;
+    private Timestamp lastUpdate;
 }

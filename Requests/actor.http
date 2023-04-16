@@ -1,0 +1,49 @@
+
+GET http://localhost:9091/RestSakilaApplication/webapi/actor/getActor/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/actor/getAllActors HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+
+GET http://localhost:9091/RestSakilaApplication/webapi/actor/getActorByName/messi HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+POST  http://localhost:9091/RestSakilaApplication/webapi/actor/createActor HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstName": "amira",
+    "lastName": "yassin",
+    "lastUpdate": "2023-01-17T06:59:04Z[UTC]"
+}
+ 
+ 
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/actor/updateActor?id=1&firstName=ali HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+DELETE   http://localhost:9091/RestSakilaApplication/webapi/actor/deleteActor/211 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/actor/getActorFilms/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+

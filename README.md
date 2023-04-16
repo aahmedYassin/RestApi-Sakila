@@ -7,6 +7,9 @@ SOAP Sakila Database Web Service
 - This API allow  to access and retrieve data from many categories such as actor,film and others
 it build recently using Soap
 
+### Documentation 
+
+
 # Database
 - mysql> SOURCE C:/temp/sakila-db/sakila-schema.sql;
 - mysql> SOURCE C:/temp/sakila-db/sakila-data.sql;
@@ -22,6 +25,12 @@ it build recently using Soap
  - actor
  - film
  - category
+ - address
+ - city
+ - country
+ - staff
+ - customer
+ - store
 
 ## Run with Maven
 

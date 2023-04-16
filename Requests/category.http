@@ -1,0 +1,42 @@
+
+GET http://localhost:9091/RestSakilaApplication/webapi/category/getCategory/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/category/getAllCategories HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+GET http://localhost:9091/RestSakilaApplication/webapi/category/getCategoryFilms/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/category/updateCategory?id=24&name=football HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+
+
+###
+DELETE   http://localhost:9091/RestSakilaApplication/webapi/category/deleteCategory/24 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+
+POST  http://localhost:9091/RestSakilaApplication/webapi/category/createCategory HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+   "name": "Cooking",
+  "lastUpdate": "2006-02-15T02:46:27Z[UTC]"
+  
+}

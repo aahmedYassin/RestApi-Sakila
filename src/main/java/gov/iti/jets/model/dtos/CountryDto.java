@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import java.util.*;
 
 @Data
 @Getter
@@ -15,9 +14,9 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CategoryDto {
-
-  private Short categoryId;
-  private String name;
-  private Timestamp lastUpdate;
+public class CountryDto {
+    
+    private Short countryId;
+    private String country;
+    private Timestamp lastUpdate;
 }

@@ -1,0 +1,9 @@
+
+GET http://localhost:9091/RestSakilaApplication/webapi/staff/getStaffById/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/staff/getStaffByName/Jon HTTP/1.1
+Content-Type: application/json
+Accept: application/json

@@ -1,0 +1,30 @@
+
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/film/getFilm/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/film/getAllFilms HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+GET http://localhost:9091/RestSakilaApplication/webapi/film/getFilmByLength/86 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+GET http://localhost:9091/RestSakilaApplication/webapi/film/getFilmCategory/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+
+GET http://localhost:9091/RestSakilaApplication/webapi/film/geFilmActors/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json

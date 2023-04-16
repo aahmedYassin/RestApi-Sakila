@@ -1,0 +1,15 @@
+
+GET http://localhost:9091/RestSakilaApplication/webapi/store/getStoreById/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/store/getStoreStaff/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+###
+GET http://localhost:9091/RestSakilaApplication/webapi/store/getStoreCustomer/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json

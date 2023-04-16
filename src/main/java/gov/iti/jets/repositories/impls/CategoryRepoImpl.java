@@ -57,4 +57,41 @@ public class CategoryRepoImpl implements CategoryRepo {
         return films;
     }
 
+    @Override
+    public Category updateCategoryById(int id, String name) {
+        Category category = getCategoryById(id);
+        if (category == null) {
+            return null;
+        }
+        EntityTransaction entityTransaction = EntityManagerSingleton.getEntityManager().getTransaction();
+        entityTransaction.begin();
+        category.setName(name);
+        entityTransaction.commit();
+
+        return category;
+    }
+
+    @Override
+    public int deleteCategoryById(int id) {
+        Category category = getCategoryById(id);
+        if (category == null) {
+            return -1;
+        }
+        EntityTransaction entityTransaction = EntityManagerSingleton.getEntityManager().getTransaction();
+        entityTransaction.begin();
+        EntityManagerSingleton.getEntityManager().remove(category);
+        entityTransaction.commit();
+        return 1;
+    }
+
+    @Override
+    public Category createCategory(Category category) {
+        EntityTransaction entityTransaction = EntityManagerSingleton.getEntityManager().getTransaction();
+        entityTransaction.begin();
+        EntityManagerSingleton.getEntityManager().persist(category);
+        entityTransaction.commit();
+        return category;
+
+    }
+
 }

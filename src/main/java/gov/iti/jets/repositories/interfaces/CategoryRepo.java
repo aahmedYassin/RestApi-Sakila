@@ -11,7 +11,12 @@ public interface CategoryRepo {
     public Category getCategoryById(int id);
 
     public ArrayList<Category> getAllCategories();
-    
+
     public ArrayList<Film> getCategoryFilmsById(int id);
 
+    public Category updateCategoryById(int id, String name);
+
+    public int deleteCategoryById(int id);
+
+    public Category createCategory(Category category);
 }
