@@ -1,11 +1,10 @@
 
 
-# Project Title
-REST Sakila Database Web Service
+# REST Sakila Database Web Service
 
 ### Description
 - This API allow  to access and retrieve data from many categories such as actor,film and others
-it build recently using Rest
+  it build recently using Rest
 
 ### Documentation 
 - https://documenter.getpostman.com/view/14564420/2s93XyU3Dy
@@ -20,7 +19,8 @@ it build recently using Rest
 - Maven
 - Tomcat(apache-maven-3.8.6)
 - JAX-WS Metro
-- SoapUi(https://www.soapui.org/downloads/soapui/)
+- Mapstruct
+- Lombok
 
 ##  EndPoints
  - actor
