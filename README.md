@@ -47,8 +47,6 @@
 - Deploy the application on tomcat server using command "mvn clean install tomcat7:deploy"
 - Requests Folder contain all requests
 
-The web services will now be available at http://localhost:9090/Sakila. You can use a tool like Postman to interact with the services.
-
 ##  EndPoints
  - Actor
  - Film
