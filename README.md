@@ -1,5 +1,6 @@
 
 
+
 # REST Sakila Database Web Service
 
 ### Description
@@ -23,6 +24,7 @@
 - Clone the repository to your computer
 - open project in vscode
 - Configure pom.xml
+
       <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
@@ -30,11 +32,12 @@
         <configuration>
           <username>{Tomcat userName}</username>
           <password>{Tomcat password}</password>
-          <url>http://localhost:{Tomcat port}/manager/text</url>
+          <url>http://localhost:{Tomcat port}/manager  text</url>
           <path>/SakilaApplication</path>
         </configuration>
       </plugin>
  - persistence.xml
+ 
          <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sakila"/>
             <property name="jakarta.persistence.jdbc.user" value="{database userName}"/>
