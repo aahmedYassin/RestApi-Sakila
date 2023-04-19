@@ -16,9 +16,9 @@
 - ORM
 - Maven
 - Tomcat(apache-maven-3.8.6)
-- JAX-WS Metro
 - Mapstruct
 - Lombok
+- Jersey
 
 ## Getting Started
 - Clone the repository to your computer
@@ -45,6 +45,7 @@
           </properties>
 
 - Deploy the application on tomcat server using command "mvn clean install tomcat7:deploy"
+- Requests Folder contain all requests
 
 The web services will now be available at http://localhost:9090/Sakila. You can use a tool like Postman to interact with the services.
 
@@ -61,9 +62,8 @@ The web services will now be available at http://localhost:9090/Sakila. You can 
 
 ## Run with Maven
 
-
 - cmd 
-mvn clean compile tomcat7:redeploy
+ mvn clean compile tomcat7:redeploy
 
 
 
