@@ -41,7 +41,7 @@
             <property name="jakarta.persistence.jdbc.password" value="database password"/>
           </properties>
 
-Deploy the application on tomcat server using command "mvn clean install tomcat7:deploy"
+- Deploy the application on tomcat server using command "mvn clean install tomcat7:deploy"
 
 The web services will now be available at http://localhost:9090/Sakila. You can use a tool like Postman to interact with the services.
 
